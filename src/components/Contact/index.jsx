@@ -26,12 +26,12 @@ export default function index() {
                             src={`/images/background.jpg`}
                             />
                         </div>
-                        <h2>Let's work</h2>
+                        <h2>Let's create</h2>
                     </span>
-                    <h2>together</h2>
+                    <h2>magic together</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>
                         <Rounded  backgroundColor={"#334BD3"} className={styles.button}>
-                            <p>Get in touch</p>
+                            <p>Start Project</p>
                         </Rounded>
                     </motion.div>
                     <motion.svg style={{rotate, scale: 2}} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,38 +40,38 @@ export default function index() {
                 </div>
                 <div className={styles.nav}>
                         <Rounded>
-                            <p>info@dennissnellenberg.com</p>
+                            <p>hello@digitalnexus.studio</p>
                         </Rounded>
                         <Rounded>
-                            <p>+31 6 27 84 74 30</p>
+                            <p>+1 (555) 123-4567</p>
                         </Rounded>
                 </div>
                 <div className={styles.info}>
                     <div>
                         <span>
-                            <h3>Version</h3>
-                            <p>2022 © Edition</p>
+                            <h3>Location</h3>
+                            <p>New York, USA</p>
                         </span>
                         <span>
-                            <h3>Version</h3>
+                            <h3>Local Time</h3>
                             <p>11:49 PM GMT+2</p>
                         </span>
                     </div>
                     <div>
                         <span>
-                            <h3>socials</h3>
+                            <h3>Awards</h3>
                             <Magnetic>
                                 <p>Awwwards</p>
                             </Magnetic>
                         </span>
                         <Magnetic>
-                            <p>Instagram</p>
+                            <p>FWA</p>
                         </Magnetic>
                         <Magnetic>
-                            <p>Dribbble</p>
+                            <p>CSS Awards</p>
                         </Magnetic>
                         <Magnetic>
-                            <p>Linkedin</p>
+                            <p>Behance</p>
                         </Magnetic>
                     </div>
                 </div>
