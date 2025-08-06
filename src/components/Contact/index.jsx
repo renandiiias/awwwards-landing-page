@@ -1,81 +1,59 @@
+'use client';
 import styles from './style.module.scss';
-import Image from 'next/image';
-import Rounded from '../../common/RoundedButton';
-import { useRef } from 'react';
-import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
-import Magnetic from '../../common/Magnetic';
 
-export default function index() {
-    const container = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: container,
-        offset: ["start end", "end end"]
-    })
-    const x = useTransform(scrollYProgress, [0, 1], [0, 100])
-    const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
-    const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
-    return (
-        <motion.div style={{y}} ref={container} className={styles.contact}>
-            <div className={styles.body}>
-                <div className={styles.title}>
-                    <span>
-                        <div className={styles.imageContainer}>
-                            <Image 
-                            fill={true}
-                            alt={"image"}
-                            src={`/images/background.jpg`}
-                            />
-                        </div>
-                        <h2>Vamos transformar</h2>
-                    </span>
-                    <h2>seu negócio</h2>
-                    <motion.div style={{x}} className={styles.buttonContainer}>
-                        <Rounded  backgroundColor={"#FF6B6B"} className={styles.button}>
-                            <p>Quero Clientes Premium</p>
-                        </Rounded>
-                    </motion.div>
-                    <motion.svg style={{rotate, scale: 2}} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z" fill="white"/>
-                    </motion.svg>
-                </div>
-                <div className={styles.nav}>
-                        <Rounded>
-                            <p>contato@marketingestrategico.com.br</p>
-                        </Rounded>
-                        <Rounded>
-                            <p>+55 (11) 99999-9999</p>
-                        </Rounded>
-                </div>
-                <div className={styles.info}>
-                    <div>
-                        <span>
-                            <h3>Localização</h3>
-                            <p>São Paulo, Brasil</p>
-                        </span>
-                        <span>
-                            <h3>Horário Local</h3>
-                            <p>14:30 GMT-3</p>
-                        </span>
-                    </div>
-                    <div>
-                        <span>
-                            <h3>Certificações</h3>
-                            <Magnetic>
-                                <p>Google Ads</p>
-                            </Magnetic>
-                        </span>
-                        <Magnetic>
-                            <p>Facebook Blueprint</p>
-                        </Magnetic>
-                        <Magnetic>
-                            <p>Google Analytics</p>
-                        </Magnetic>
-                        <Magnetic>
-                            <p>HubSpot</p>
-                        </Magnetic>
-                    </div>
-                </div>
+export default function Contact() {
+  return (
+    <section className={`${styles.contact} section`} id="contato">
+      <div className="container">
+        <div className={styles.content}>
+          <div className={styles.info}>
+            <h2>SEU NEGÓCIO MERECE</h2>
+            <h3 className={styles.highlight}>CLIENTES DE QUALIDADE</h3>
+            <p>
+              Agende agora uma análise gratuita e descubra como transformar seu fluxo de clientes.
+            </p>
+            
+            <div className={styles.cta}>
+              <a href="https://wa.me/5511999999999?text=Olá! Quero clientes premium para meu negócio" 
+                 className="btn btn-primary btn-large" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                Quero Clientes Premium
+              </a>
+              <a href="https://calendly.com/seucalendario" 
+                 className="btn btn-secondary" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                Agendar Consulta
+              </a>
             </div>
-        </motion.div>
-    )
+            
+            <div className={styles.contactInfo}>
+              <div className={styles.contactItem}>
+                <span className={styles.icon}>📧</span>
+                <span>contato@marketingestrategico.com.br</span>
+              </div>
+              <div className={styles.contactItem}>
+                <span className={styles.icon}>📱</span>
+                <span>+55 (11) 99999-9999</span>
+              </div>
+              <div className={styles.contactItem}>
+                <span className={styles.icon}>📍</span>
+                <span>São Paulo, Brasil</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className={styles.coverage}>
+            <h4>ATENDEMOS NEGÓCIOS EM TODO O BRASIL</h4>
+            <p>Centenas de empresários de diversos segmentos já transformaram seus resultados com nossa metodologia</p>
+            <div className={styles.mapPlaceholder}>
+              <div className={styles.mapIcon}>🇧🇷</div>
+              <p>Cobertura Nacional</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

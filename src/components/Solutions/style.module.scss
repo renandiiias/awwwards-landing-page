@@ -1,0 +1,49 @@
+.solutions {
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  color: white;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: #FF6B6B;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.solutionsGrid {
+  margin-top: 60px;
+}
+
+.solutionCard {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);
+  }
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.solutionCard h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.solutionCard p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}

@@ -1,77 +1,38 @@
 'use client';
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './style.module.scss';
-import { usePathname } from 'next/navigation';
-import { AnimatePresence } from 'framer-motion';
-import Nav from './nav';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Rounded from '../../common/RoundedButton';
-import Magnetic from '../../common/Magnetic';
 
-export default function index() {
-    const header = useRef(null);
-    const [isActive, setIsActive] = useState(false);
-    const pathname = usePathname();
-    const button = useRef(null);
+export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect( () => {
-      if(isActive) setIsActive(false)
-    }, [pathname])
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    useLayoutEffect( () => {
-        gsap.registerPlugin(ScrollTrigger)
-        gsap.to(button.current, {
-            scrollTrigger: {
-                trigger: document.documentElement,
-                start: 0,
-                end: window.innerHeight,
-                onLeave: () => {gsap.to(button.current, {scale: 1, duration: 0.25, ease: "power1.out"})},
-                onEnterBack: () => {gsap.to(button.current, {scale: 0, duration: 0.25, ease: "power1.out"},setIsActive(false))}
-            }
-        })
-    }, [])
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    return (
-        <>
-        <div ref={header} className={styles.header}>
-            <div className={styles.logo}>
-                <p className={styles.copyright}>©</p>
-                <div className={styles.name}>
-                    <p className={styles.codeBy}>Marketing</p>
-                    <p className={styles.dennis}>Estratégico</p>
-                    <p className={styles.snellenberg}>Pro</p>
-                </div>
-            </div>
-            <div className={styles.nav}>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a>Serviços</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a>Resultados</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a>Contato</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-            </div>
+  return (
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+      <div className="container">
+        <div className={styles.nav}>
+          <div className={styles.logo}>
+            <span>Marketing</span>
+            <span className={styles.highlight}>Estratégico</span>
+          </div>
+          
+          <nav className={styles.menu}>
+            <a href="#servicos">Serviços</a>
+            <a href="#resultados">Resultados</a>
+            <a href="#contato">Contato</a>
+            <a href="#contato" className="btn btn-primary">
+              Quero Clientes Qualificados
+            </a>
+          </nav>
         </div>
-        <div ref={button} className={styles.headerButtonContainer}>
-            <Rounded onClick={() => {setIsActive(!isActive)}} className={`${styles.button}`}>
-                <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
-            </Rounded>
-        </div>
-        <AnimatePresence mode="wait">
-            {isActive && <Nav />}
-        </AnimatePresence>
-        </>
-    )
+      </div>
+    </header>
+  );
 }

@@ -1,0 +1,44 @@
+.problems {
+  background: white;
+}
+
+.highlight {
+  color: #FF6B6B;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  color: #666;
+}
+
+.problemsGrid {
+  margin-top: 60px;
+}
+
+.problemCard {
+  border-left: 4px solid #FF6B6B;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.problemCard h3 {
+  color: #2c2c2c;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.problemCard p {
+  color: #666;
+  line-height: 1.6;
+}
