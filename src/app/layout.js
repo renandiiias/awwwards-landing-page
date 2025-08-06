@@ -5,8 +5,8 @@ import Header from '../components/Header';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Digital Nexus Studio - Award-Winning Digital Agency',
-  description: 'We craft extraordinary digital experiences that push boundaries and redefine what\'s possible.',
+  title: 'Marketing Estratégico - Pare de Pagar por Leads que Não Compram',
+  description: 'Marketing Digital Estratégico + Tráfego Qualificado para Negócios que Querem Crescer de Verdade. Atraia clientes que valorizam qualidade.',
 }
 
 export default function RootLayout({ children }) {

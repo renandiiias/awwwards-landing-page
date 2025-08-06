@@ -9,24 +9,24 @@ import Rounded from '../../common/RoundedButton';
 
 const projects = [
   {
-    title: "Tesla Model S",
+    title: "Clientes que desistem quando descobrem o preço",
     src: "c2montreal.png",
-    color: "#000000"
+    color: "#FF6B6B"
   },
   {
-    title: "Nike Air Max",
+    title: "Agenda cheia de orçamentos de baixo valor",
     src: "officestudio.png",
-    color: "#8C8C8C"
+    color: "#FF8E53"
   },
   {
-    title: "Apple Vision Pro",
+    title: "Marketing desconectado do seu negócio",
     src: "locomotive.png",
-    color: "#EFE8D3"
+    color: "#FF6B9D"
   },
   {
-    title: "Spotify Wrapped",
+    title: "Anúncios que atraem o público errado",
     src: "silencio.png",
-    color: "#706D63"
+    color: "#C44569"
   }
 ]
 

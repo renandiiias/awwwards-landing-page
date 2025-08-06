@@ -1,0 +1,352 @@
+.newSection {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 80px;
+    padding: 0 200px;
+
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #2C2C2C;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #FF6B6B;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #666;
+      font-weight: 300;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+
+  .problemsSection {
+    margin-bottom: 150px;
+
+    .problemsGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding: 0 200px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .problemCard {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid #FF6B6B;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2C2C2C;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+      }
+    }
+  }
+
+  .solutionsSection {
+    margin-bottom: 150px;
+    background: white;
+    padding: 100px 0;
+    border-radius: 40px;
+    margin: 0 50px 150px 50px;
+
+    .solutionsGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding: 0 200px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .solutionCard {
+      background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+      padding: 40px;
+      border-radius: 20px;
+      color: white;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .coverageSection {
+    margin-bottom: 150px;
+    padding: 100px 200px;
+    text-align: center;
+
+    .coverageContent {
+      h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #2C2C2C;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.3rem;
+        color: #666;
+        margin-bottom: 60px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .mapPlaceholder {
+        background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+        padding: 80px;
+        border-radius: 30px;
+        color: white;
+
+        .mapIcon {
+          font-size: 4rem;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin: 0;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .testimonialsSection {
+    margin-bottom: 150px;
+
+    .testimonialsGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      padding: 0 100px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .testimonialCard {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      .quote {
+        margin-bottom: 30px;
+
+        p {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          color: #2C2C2C;
+          font-style: italic;
+          margin: 0;
+        }
+      }
+
+      .author {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+
+        .authorInfo {
+          h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2C2C2C;
+            margin-bottom: 5px;
+          }
+
+          p {
+            font-size: 1rem;
+            color: #666;
+            margin: 0;
+          }
+        }
+      }
+
+      .metrics {
+        display: flex;
+        gap: 20px;
+
+        .metric {
+          flex: 1;
+          text-align: center;
+          padding: 15px;
+          background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+          border-radius: 10px;
+          color: white;
+
+          .metricLabel {
+            display: block;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+          }
+
+          .metricValue {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .finalCTA {
+    background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
+    padding: 100px 200px;
+    text-align: center;
+    color: white;
+    border-radius: 40px;
+    margin: 0 50px;
+
+    .ctaContent {
+      h2 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #FF6B6B;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 1.3rem;
+        margin-bottom: 50px;
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .ctaButtons {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .sectionHeader {
+      padding: 0 100px;
+    }
+
+    .problemsGrid,
+    .solutionsGrid {
+      padding: 0 100px;
+    }
+
+    .coverageSection {
+      padding: 100px 100px;
+    }
+
+    .finalCTA {
+      padding: 100px 100px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sectionHeader {
+      padding: 0 50px;
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .problemsGrid,
+    .solutionsGrid {
+      grid-template-columns: 1fr;
+      padding: 0 50px;
+    }
+
+    .testimonialsGrid {
+      grid-template-columns: 1fr;
+      padding: 0 50px;
+    }
+
+    .coverageSection {
+      padding: 100px 50px;
+    }
+
+    .finalCTA {
+      padding: 100px 50px;
+      margin: 0 20px;
+
+      .ctaContent {
+        h2,
+        h3 {
+          font-size: 2.5rem;
+        }
+
+        .ctaButtons {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

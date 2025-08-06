@@ -5,38 +5,38 @@ import Image from 'next/image';
 
 const slider1 = [
     {
-        color: "#e3e5e7",
+        color: "#FFE5E5",
         src: "c2.jpg"
     },
     {
-        color: "#d6d7dc",
+        color: "#FFE8E8",
         src: "decimal.jpg"
     },
     {
-        color: "#e3e3e3",
+        color: "#FFEBEB",
         src: "funny.jpg"
     },
     {
-        color: "#21242b",
+        color: "#FFD6D6",
         src: "google.jpg"
     }
 ]
 
 const slider2 = [
     {
-        color: "#d4e3ec",
+        color: "#FFE0E0",
         src: "maven.jpg"
     },
     {
-        color: "#e5e0e1",
+        color: "#FFDADA",
         src: "panda.jpg"
     },
     {
-        color: "#d7d4cf",
+        color: "#FFD3D3",
         src: "powell.jpg"
     },
     {
-        color: "#e1dad6",
+        color: "#FFCCCC",
         src: "wix.jpg"
     }
 ]

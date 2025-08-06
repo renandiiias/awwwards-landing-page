@@ -8,6 +8,7 @@ import Projects from '../components/Projects';
 import Description from '../components/Description';
 import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
+import NewSection from '../components/NewSection';
 
 export default function Home() {
 
@@ -36,6 +37,7 @@ export default function Home() {
       <Landing />
       <Description />
       <Projects />
+      <NewSection />
       <SlidingImages />
       <Contact />
     </main>
