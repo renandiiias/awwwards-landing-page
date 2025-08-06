@@ -2,13 +2,17 @@
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
-import Preloader from '../components/Preloader';
+import dynamic from 'next/dynamic';
 import Landing from '../components/Landing';
 import Projects from '../components/Projects';
 import Description from '../components/Description';
 import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import NewSection from '../components/NewSection';
+
+const Preloader = dynamic(() => import('../components/Preloader'), {
+  ssr: false
+});
 
 export default function Home() {
 
